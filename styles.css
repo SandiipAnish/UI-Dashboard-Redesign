@@ -1,0 +1,285 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    padding: 0;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr;
+    width: 100%;
+    height: 100%;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+body.dark-mode .container {
+    background-color: #444;
+    box-shadow: 20px 20px 60px #222, -20px -20px 60px #666;
+}
+
+header {
+    grid-column: 1 / -1;
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode header {
+    background-color: #444;
+    color: #fff;
+    border-bottom: 1px solid #666;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.horizontal-dropdowns {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.neumorphic-dropdown {
+    padding: 10px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    color: #555;
+}
+
+body.dark-mode .neumorphic-dropdown {
+    background: #555;
+    box-shadow: inset 5px 5px 10px #333, inset -5px -5px 10px #777;
+}
+
+.neumorphic-dropdown select {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+    width: 150px;
+}
+
+body.dark-mode .neumorphic-dropdown select {
+    color: #fff;
+}
+
+aside {
+    background-color: #e0e0e0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-right: 1px solid #ccc;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+body.dark-mode aside {
+    background-color: #444;
+    border-right: 1px solid #666;
+}
+
+.neumorphic-btn {
+    padding: 15px;
+    background-color: #e0e0e0;
+    color: #333;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .neumorphic-btn {
+    background-color: #555;
+    color: #fff;
+    box-shadow: 5px 5px 10px #333, -5px -5px 10px #777;
+}
+
+.neumorphic-btn:hover {
+    box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+}
+
+body.dark-mode .neumorphic-btn:hover {
+    box-shadow: inset 5px 5px 10px #333, inset -5px -5px 10px #777;
+}
+
+main {
+    padding: 20px;
+    overflow-y: auto;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode main {
+    background-color: #444;
+}
+
+.tabs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.neumorphic-tab {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #e0e0e0;
+    color: #333;
+    box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .neumorphic-tab {
+    background-color: #555;
+    color: #fff;
+    box-shadow: 5px 5px 10px #333, -5px -5px 10px #777;
+}
+
+.neumorphic-tab.active {
+    background-color: #e0e0e0;
+    box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+}
+
+body.dark-mode .neumorphic-tab.active {
+    background-color: #555;
+    box-shadow: inset 5px 5px 10px #333, inset -5px -5px 10px #777;
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.neumorphic-input {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: #e0e0e0;
+    color: #333;
+    box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .neumorphic-input {
+    background-color: #555;
+    color: #fff;
+    box-shadow: inset 5px 5px 10px #333, inset -5px -5px 10px #777;
+}
+
+.neumorphic-table {
+    margin-top: 20px;
+    background: #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: inset 3px 3px 6px #bebebe, inset -3px -3px 6px #ffffff;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .neumorphic-table {
+    background: #555;
+    box-shadow: inset 3px 3px 6px #333, inset -3px -3px 6px #777;
+}
+
+.neumorphic-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.neumorphic-table th,
+.neumorphic-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body.dark-mode .neumorphic-table th,
+body.dark-mode .neumorphic-table td {
+    border-bottom: 1px solid #666;
+}
+
+.neumorphic-table th {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+body.dark-mode .neumorphic-table th {
+    background-color: #666;
+    color: #fff;
+}
+
+.neumorphic-table td {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+body.dark-mode .neumorphic-table td {
+    background-color: #555;
+    color: #fff;
+}
+
+.chart-container {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+    
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+    }
+
+    aside {
+        grid-row: 2;
+        flex-direction: row;
+        gap: 10px;
+        overflow-x: auto;
+    }
+
+    .tabs {
+        flex-direction: column;
+    }
+
+    .header .dropdowns select {
+        margin: 0 5px;
+    }
+
+    .actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
