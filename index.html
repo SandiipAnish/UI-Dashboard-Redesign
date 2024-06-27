@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Planning System (NPS)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>NETWORK PLANNING SYSTEM (NPS)</h1>
+            <div class="horizontal-dropdowns">
+                <div class="neumorphic-dropdown">
+                    <select aria-label="Select a vendor">
+                        <option>Select a vendor</option>
+                        <option>Vendor 1</option>
+                        <option>Vendor 2</option>
+                    </select>
+                </div>
+                <div class="neumorphic-dropdown">
+                    <select aria-label="Select a family code">
+                        <option>Select a family code</option>
+                        <option>Family Code 1</option>
+                        <option>Family Code 2</option>
+                    </select>
+                </div>
+                <div class="neumorphic-dropdown">
+                    <select aria-label="Select a site">
+                        <option>Select a site</option>
+                        <option>Site 1</option>
+                        <option>Site 2</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+        <aside>
+            <button class="neumorphic-btn active" aria-label="Network Plan">Network Plan</button>
+            <button class="neumorphic-btn" aria-label="Demand Flow">Demand Flow</button>
+            <button class="neumorphic-btn" aria-label="Performance Report">Performance Report</button>
+            <button class="neumorphic-btn" id="darkModeToggle" aria-label="Toggle Dark/Light Mode">Enable Dark Mode</button>
+        </aside>
+        <main>
+            <div class="tabs">
+                <button class="neumorphic-tab active" aria-label="Summary">Summary</button>
+                <button class="neumorphic-tab" aria-label="Transfers">Transfers</button>
+            </div>
+            <div class="content">
+                <div class="neumorphic-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Source</th>
+                                <th>Destination</th>
+                                <th>Week Date</th>
+                                <th>Quantity</th>
+                                <th>SKUs_Count</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Warehouse A</td>
+                                <td>Store 1</td>
+                                <td>01/01/2024</td>
+                                <td>100</td>
+                                <td>50</td>
+                            </tr>
+                            <tr>
+                                <td>Warehouse B</td>
+                                <td>Store 2</td>
+                                <td>01/08/2024</td>
+                                <td>200</td>
+                                <td>75</td>
+                            </tr>
+                            <tr>
+                                <td>Warehouse C</td>
+                                <td>Store 3</td>
+                                <td>01/15/2024</td>
+                                <td>150</td>
+                                <td>60</td>
+                            </tr>
+                            <tr>
+                                <td>Warehouse D</td>
+                                <td>Store 4</td>
+                                <td>01/22/2024</td>
+                                <td>250</td>
+                                <td>80</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="chart-container">
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class="actions">
+                    <button class="neumorphic-btn" aria-label="Download">Download</button>
+                    <input type="date" placeholder="Date (MM/DD/YY)" aria-label="Date" class="neumorphic-input">
+                    <button class="neumorphic-btn" aria-label="Generate SAP Files">Generate SAP Files</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
